@@ -7,6 +7,26 @@
 **Importatn:** Understanding the .git folder. 
 [Section Slide: S4_Git+&+Github_+Basics.pdf](doc/S4_Git+&+Github_+Basics.pdf)
 
+### 4.23 What Is Git Repo?
+![Git Repository](img/22_1_Repository.png "Git Repository")
+Every Git Repo has its own history.
+
+### 4.24 Our First Commands: Git Init and Git Status
+![Git Status](img/24_1_GitStatus.png "Git Status")
+
+
+
+
+
+
+
+
+
+
+---------
+---------
+
+
 ### 3.13 Installing Git: Terminal VS GUIs
 **Git** is primarily a terminal tool.
 **Git GUI:** Github Desktop, SourceTree, GitKraken ......
