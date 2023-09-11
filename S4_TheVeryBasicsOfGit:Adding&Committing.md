@@ -13,7 +13,7 @@ Every Git Repo has its own history.
 
 ### 4.24 Our First Commands: Git Init and Git Status
 ![Git Status](img/24_1_GitStatus.png "Git Status")
-
+![Git Init](img/24_2_GitInit.png "Git Init")
 
 
 
