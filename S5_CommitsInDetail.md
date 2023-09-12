@@ -1,6 +1,6 @@
 # The Git & Github Bootcamp
 
-## Section 4. The Very Basics Of Git: Adding & Committing
+## Section 5. Commits In Detail
 ---
 ### 4.22 What Really Matters In This Section
 **Critical:** What Are Git Repos? Git Init; Git Status; The Committing Workfolw; Git Add; Git Commit; Git Log.
