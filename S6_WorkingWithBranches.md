@@ -56,27 +56,82 @@ Document: [git switch](https://git-scm.com/docs/git-switch)
 ----
 
 ### 6.47 More Practice With Branching
+`git commit -a -m "xxxxxxxxx"` sample we to add and commit.
 
 ----
 
 ### 6.48 Another Option: Git Checkout Vs. Git Switch
-
+`git checkout` can do similar thing of `git switch`
+Document: [git checkout](https://git-scm.com/docs/git-checkout)
+![Checkout](img/48_1_Checkout.png "Checkout")
+`git checkout -b <branch-name>` is to create a new branch and switch to new branch.
+![Creating & Switching](img/48_2_Switch_Create.png "Creating & Switching")
 
 ----
 
 ### 6.49 Switching Branches With Unstaged Changes?
+It will report an error if we switch branches with unstaged changes for the exist files.
+If the unstaged changes are create new files and doesn't conflict another branch, there is no error and the unstaged new files will keep in local repo.
+
+Whatever, suggest to stage the changes before switch the branches.
 
 ----
 
 ### 6.50 Deleting & Renaming Branches
+Document: [git branch](https://git-scm.com/docs/git-branch)
 
+Use the `git branch -d <branch_name>` or `git branch --delete <branch_name>` to delete a branch.
+* Can't delete the current branch. Before delete branch, must switch to other branches;
+* Report ERROR, if the delete branch not fully merged. If want to continue delete a un-merged branche, use `git branch -D <branch_name>` or `git branch --delete --force <branch_name>`.
+  
+Use the `git branch -m <branch_name>` or `git branch --move <branch_name>` to move/rename a branch and corresponding reflog.
+* Rename must on the branch, which need to rename;
 
 ----
 
 ### 6.51 How Git Stores HEAD & Branches
 
+The Git HEAD is saved in `.git/HEAD`. 
+If we run `cat HEAD`, it will show `ref: refs/heads/master`. That means current `HEAD` is get from `master` branch last commit.
+
+We can open the head files in `.git/refs/heads/**`. Each file name is the branch name and each file saved the corresponding last commit as its head.
+
+
 ----
 
 ### 6.52 Branching Exercise
+[Branching Exercise](https://plum-poppy-0ea.notion.site/Branching-Exercise-b5460c881d56400cb046357d9a430bf8)
 
-
+Sample Code:
+```
+ 1977  mkdir Patronus
+ 1978  ls
+ 1979  cd Patronus
+ 1980  git init
+ 1981  git branch -m main
+ 1982  touch patronus.txt
+ 1983  ls
+ 1984  git add .
+ 1985  git commit -m "add empty patronums file"
+ 1986  git branch harry
+ 1987  git branch
+ 1988  git branch snape
+ 1989  git checkout harry
+ 1990  git switch harry
+ 1991  code .
+ 1992  git add .
+ 1993  git commit -m "add harry's stag patronus"
+ 1994  git checkout snape
+ 1995  code .
+ 1996  git add .
+ 1997  git commit "add snape's doe patronus"
+ 1998  git commit -m "add snape's doe patronus"
+ 1999  git branch lily
+ 2000  git switch lily
+ 2001  code .
+ 2002  git add .
+ 2003  git commit -m "add lily's doe patronus"
+ 2004  git branch
+ 2005  git branch -d snape
+ 2006  git branch
+ ```
