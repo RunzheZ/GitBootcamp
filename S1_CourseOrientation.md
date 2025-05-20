@@ -14,7 +14,6 @@ At the end of every section has the exercises.
 
 ### 1.5 Accessing The Slides & Diagrams
 
-Add one line to test
 
 
 
